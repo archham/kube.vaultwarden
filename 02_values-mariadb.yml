@@ -1,0 +1,15 @@
+auth:
+  rootPassword:  __MYSQL_ROOT_PW__
+  database: vw
+  username: vw
+  password: __MYSQL_PW__
+
+primary:
+  persistence:
+    enabled: true
+    storageClass: __STORAGE_CLASS__
+    size: 5Gi
+
+replica:
+  replicaCount: 1
+

@@ -1,0 +1,27 @@
+image:
+  registry: docker.io
+  repository: vaultwarden/server
+
+
+database:
+  type: mysql
+  uriOverride: "mysql://vw:__MYSQL_PW__@mariadb:3306/vw"
+
+domain: "https://__FQDN__"
+adminToken:
+  value: "__ADMIN_TOKEN__"
+
+storage:
+  data:
+    name: "vaultwarden-data"
+    size: "5Gi"
+    accessMode: "ReadWriteOnce"
+
+ingress:
+  enabled: true
+  class: "traefik"
+  tls: true
+  hostname: "__FQDN__"
+  path: "/"
+  pathType: "Prefix"
+
