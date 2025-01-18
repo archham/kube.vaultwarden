@@ -1,3 +1,6 @@
+helm repo add bitnami https://charts.bitnami.com/bitnami
+helm repo add vaultwarden https://guerzon.github.io/vaultwarden
+helm repo update
 
 genpasswd ()
 { 
